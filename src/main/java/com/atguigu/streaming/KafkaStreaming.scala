@@ -25,7 +25,7 @@ object createKafkaProducerPool{
 
   //用于返回真正的对象池GenericObjectPool
   def apply():  GenericObjectPool[KafkaProducerProxy] = {
-    val producerFactory = new BaseKafkaProducerFactory("192.168.119.101:9092", defaultTopic = Option("lj"))
+    val producerFactory = new BaseKafkaProducerFactory("192:9092", defaultTopic = Option("lj"))
     val pooledProducerFactory = new PooledKafkaProducerAppFactory(producerFactory)
     //指定了你的kafka对象池的大小
     val poolConfig = {
