@@ -24,7 +24,7 @@ object HBaseUtils {
   def createConf(): Configuration = {
     if (hbaseConf == null) {
       hbaseConf = HBaseConfiguration.create()
-      hbaseConf.set("hbase.zookeeper.quorum","192.168.119.103")
+      hbaseConf.set("hbase.zookeeper.quorum","192")
       hbaseConf.set("hbase.zookeeper.property.clientPort","2181")
     }
     hbaseConf
